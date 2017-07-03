@@ -1,0 +1,63 @@
+
+
+//
+//https://www.hackerrank.com/challenges/coin-change
+//
+
+
+#include <iostream>
+
+#include <boost/algorithm/string/split.hpp>
+//#include <boost/algorithm/string/classification.hpp>
+
+//change(0, 0, ...) = 0
+//change(0, ..., ...) = 0 ?
+
+
+public class change {
+
+    int change(int n, int m, std::vector C){
+
+	int possibilities = 0;
+
+  
+	return possibilities;
+    }
+
+    int main(int argc, char *argv[]){
+
+	try{
+
+	std::string in;
+	std::cin >> in;
+
+	String[] split = in.split(" ");
+	
+	
+	int n = std::stoi(split[0]);
+	int m = std::stoi(split[1]);
+
+	assert (n < 1 || n > 250) : "n must be a number between 1 and 250";
+	assert (m < 1 || m > 50) : "m must be a number between 1 and 50";
+	
+	std::cin >> in;
+
+	split = in.split(" ");
+	
+	std::vector<std::string> al;
+	for(int i = 0; i < split.size(); i++){
+	    al.push_back(split[i]);
+	}
+	
+	std::cout << "Number of possible changes: " << ccp.change(n, m, al) << std::endl;
+
+        }
+	catch(std::invalid_argument){
+	  
+	}
+	
+    }
+    
+}
+
+
