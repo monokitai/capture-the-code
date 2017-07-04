@@ -43,13 +43,13 @@
 	std::cout << "They are not facing each other!";
 	std::cout << "-------------------------";
         std::cout << "-------------------------";
-std::cout << std::endl;
+	std::cout << std::endl;
 	
         std::cout << "Number of people: ";
         std::cin >> people;
-std::cout << std::endl;
+	std::cout << std::endl;
         std::cout << "People in the row (tallest first) with their hat color: ";
-std::cout << std::endl;
+	std::cout << std::endl;
 
 	for(int i = 0; i < people; i++){
 	  
@@ -72,13 +72,13 @@ std::cout << std::endl;
 
         std::cout << std::endl;
         std::cout << "Humans are trying to figure out a solution to the problem based on the rules...";
-std::cout << std::endl;
+        std::cout << std::endl;
 	
         std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 
         std::cout << "Solution: ";
-std::cout << std::endl;
-std::map<int, std::string> it;
+        std::cout << std::endl;
+        std::map<int, std::string> it;
 
 	for(int i = 0; i < people; i++){
 		int sum = 0;
