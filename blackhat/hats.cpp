@@ -30,55 +30,56 @@
 	
 	std::cout << "------------------------" << std::endl;
 	std::cout << "------------------------" << std::endl;
-	std::cout << "-----------Hats----------";
+	std::cout << "----------Hats----------" << std::endl;
 	std::cout << "------------------------" << std::endl;
 	std::cout << "------------------------" << std::endl;
 	std::cout << "------------------------" << std::endl;
 
 	
-	std::cout << "A crowd of humans is captured by aliens.";
-	std::cout << "The humans have to solve a problem otherwise they will die.";
-	std::cout << "Standing in a row from the tallest to the smallest human...";
-	std::cout << "they have to figure out their own hat color.";
-	std::cout << "They are not facing each other!";
-	std::cout << "-------------------------";
-        std::cout << "-------------------------";
+	std::cout << "A crowd of humans is captured by aliens." << std::endl;
+	std::cout << "The humans have to solve a problem otherwise they will die." << std::endl;
+	std::cout << "Standing in a row from the tallest to the smallest human..." << std::endl;
+	std::cout << "they have to figure out their own hat color." << std::endl;
+	std::cout << "They are not facing each other!" << std::endl;
+	std::cout << "-------------------------" << std::endl;
+        std::cout << "-------------------------" << std::endl;
 	std::cout << std::endl;
 	
         std::cout << "Number of people: ";
-        std::cin >> people;
+	std::cin >> people;
 	std::cout << std::endl;
-        std::cout << "People in the row (tallest first) with their hat color: ";
+        std::cout << "People in the row (tallest first) with their hat color: " << std::endl;
 	std::cout << std::endl;
 
 	for(int i = 0; i < people; i++){
 	  
-	    hatcolor = arc4random_uniform(1);
+            hatcolor = arc4random_uniform(1);
+	    
+	    std::cout << hatcolor << std::endl;
 	    
 	    // 0 means white hat
 	    // 1 means black hat
 	    
 	    switch(hatcolor){
 			case 0:
-			  std::cout << Person << (i+1) << ": white hat");
-	                  h.insert(std::pair<int, std::string(i, "white"));
+			  std::cout << "Person " << (i+1) << ": white hat" << std::endl;
+	                  h.insert(std::pair<int, std::string>(i, "white"));
 				break;
 			default:
-			  std::cout << Person << (i+1) << ": black hat");
-			  h.insert(std::pair<int, std::string(i, "black"));
+			  std::cout << "Person " << (i+1) << ": black hat" << std::endl;
+	                  h.insert(std::pair<int, std::string>(i, "black"));
 				break;
 	    };
 	}
 
         std::cout << std::endl;
-        std::cout << "Humans are trying to figure out a solution to the problem based on the rules...";
+        std::cout << "Humans are trying to figure out a solution to the problem based on the rules..." << std::endl;
         std::cout << std::endl;
 	
         std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 
-        std::cout << "Solution: ";
+        std::cout << "Solution: " << std::endl;
         std::cout << std::endl;
-        std::map<int, std::string> it;
 
 	for(int i = 0; i < people; i++){
 		int sum = 0;
@@ -86,9 +87,9 @@
 		for(int j = i+1; j < people-1; j++){
 			// just counting the black hats
 
-		  it.find(j);
+		  auto it = h.find(j);
 		  if(it != h.end()){
-		    if(it == "black"){
+		    if(it->second == "black"){
 		      ++sum;
 		    }
 		  }
@@ -100,9 +101,9 @@
 			call = "black";
 		}
 
-		std::cout << "Person " << (i+1) << ": \"I have a " << call << " hat.\"";
+		std::cout << "Person " << (i+1) << ": \"I have a " << call << " hat.\"" << std::endl;
 	}
+	std::cout  << std::endl;
     }
-}
 
 
