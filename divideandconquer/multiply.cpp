@@ -1,22 +1,23 @@
 
 #include <iostream>
 
-int multiply(int m, int n){
-  if(n == 0){
-    return 0;
-  }
-  else if(n == 1){
-    return m;
+int multiply(int a, int n){
+  if(n == 1){
+    return a;
   }
   else{
-    int tmp = multiply(m, n/2);
-    if(tmp % 2 == 0){
-      
+    int tmp = multiply(a, n/2);
+    if(n % 2 == 0){
+      return tmp + tmp;
+    }
+    else{
+      return tmp + tmp + a;
     }
   }
 }
 
 int main(int argc, char *argv[]){
-  std::cout << multiply(4,2) << std::endl;
+  std::cout << multiply(4,14) << std::endl;
   return 0;
 }
+
