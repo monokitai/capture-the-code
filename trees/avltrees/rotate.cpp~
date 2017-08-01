@@ -1,0 +1,10 @@
+
+#include "avltree.hpp"
+#include <iostream>
+
+int main(){
+
+  struct node *avl = (struct node *)malloc(sizeof(struct node));
+  
+  return 0;
+}
