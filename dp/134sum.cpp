@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+
 int ways(int n){
 
   int *w = new int[n+1];
