@@ -1,3 +1,3 @@
 
 # dynamic programming
-algorithms based on dynmaic programming
+algorithms based on dynamic programming
